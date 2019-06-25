@@ -8,7 +8,7 @@ const user = {
     }
   },
   actions: {
-    setUserData({state, commit}, userData) {
+    setUserData({commit}, userData) {
       commit('setUserData', userData);
     }
   },
