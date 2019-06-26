@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import PatientContainer from "@/app/modules/main/patient/containers/patient-container.vue";
 import DoctorContainer from "@/app/modules/main/doctor/containers/doctor-container.vue";
+import HomeContainer from "@/app/modules/main/home/container/home-container.vue";
 
 Vue.use(Router);
 
@@ -9,6 +10,11 @@ export default new Router({
   mode: "history",
   base: process.env.BASE_URL,
   routes: [
+    {
+      path: "/home",
+      name: "Home",
+      component: HomeContainer
+    },
     {
       path: "/patient/:id",
       name: "Patient",
