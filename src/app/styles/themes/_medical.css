@@ -1823,7 +1823,7 @@ pre code {
     line-height: 1.5;
     display: block;
     width: 100%;
-    height: calc(2.75rem + 2px);
+    height: calc(2.2rem + 2px);
     padding: .625rem .75rem;
     transition: all .15s cubic-bezier(.68, -.55, .265, 1.55);
     color: #8898aa;
@@ -1884,8 +1884,8 @@ select.form-control:focus::-ms-value {
     font-size: inherit;
     line-height: 1.5;
     margin-bottom: 0;
-    padding-top: calc(.625rem + 1px);
-    padding-bottom: calc(.625rem + 1px)
+    padding-top: calc(.325rem + 1px);
+    padding-bottom: calc(.325rem + 1px)
 }
 
 .col-form-label-lg {

@@ -1,0 +1,24 @@
+#doctor-page {
+  .doctor-body {
+    padding-bottom: 6rem;
+
+    .profile-section {
+      background: #5E72E4;
+      display: flex;
+    }
+
+    section {
+      padding: 1.5rem 0;
+
+      .section-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+
+        h3 {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

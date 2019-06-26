@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 import PatientContainer from "@/app/modules/main/patient/containers/patient-container.vue";
+import DoctorContainer from "@/app/modules/main/doctor/containers/doctor-container.vue";
 
 Vue.use(Router);
 
@@ -12,6 +13,11 @@ export default new Router({
       path: "/patient/:id",
       name: "Patient",
       component: PatientContainer
+    },
+    {
+      path: "/doctor/:id",
+      name: "Doctor",
+      component: DoctorContainer
     },
     // {
     //   path: "/doctor/:id",
