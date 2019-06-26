@@ -4,9 +4,9 @@ import ClinicModal from '../components/clinic-modal/clinic-modal.vue'
 
 export default {
   components: {
-      LoginModal,
-      SignupModal,
-      ClinicModal
+    LoginModal,
+    SignupModal,
+    ClinicModal
   },
 
   data() {
@@ -28,22 +28,22 @@ export default {
     },
     setPlace(place) {
       this.place = place
+      this.usePlace();
     },
 
     usePlace(place) {
       if (this.place) {
+        const position = {
+          lat: this.place.geometry.location.lat(),
+          lng: this.place.geometry.location.lng(),
+        }
+        this.markers = [];
         this.markers.push({
-          position: {
-            lat: this.place.geometry.location.lat(),
-            lng: this.place.geometry.location.lng(),
-          }
+          position: position
         })
-
+        this.$refs.mapRef.panTo(position);
         this.place = null;
-
       }
-
     }
-
   }
 }
