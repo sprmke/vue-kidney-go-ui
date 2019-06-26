@@ -1,5 +1,18 @@
+import Header from '@/app/modules/main/_shared/header/header.vue';
+import PatientSummary from '@/app/modules/main/patient/components/patient-summary/patient-summary.vue';
+import NewMessage from '@/app/modules/main/patient/components/new-message/new-message.vue';
+import PatientRequests from '@/app/modules/main/patient/components/patient-requests/patient-requests.vue';
+import PatientHistory from '@/app/modules/main/patient/components/patient-history/patient-history.vue';
+
 export default {
-  name: 'PatientPage',
+  name: 'PatientContainer',
+  components: {
+    Header,
+    PatientSummary,
+    NewMessage,
+    PatientRequests,
+    PatientHistory
+  },
   data() {
     return {
       requestFields: {

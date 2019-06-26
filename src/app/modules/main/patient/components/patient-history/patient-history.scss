@@ -1,0 +1,45 @@
+.patient-history {
+  table {
+    tr {
+      td {
+        &.ratings-td {
+          width: 25%;
+    
+          @media screen and (max-width: 991px) {
+            width: 35%;
+          }
+    
+          .ratings {
+            display: flex;
+            justify-content: space-between;
+      
+            i {
+              transform: scale(1.5);
+              color: #ffc000;
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 575px) {
+      tr {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid #e9ecef;
+        }
+
+        td {
+          padding: 0;
+          border: none;
+
+          &:first-child {
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

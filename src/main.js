@@ -16,7 +16,6 @@ import Vue2Filters from 'vue2-filters';
 import Directives from '@/app/directives/directives';
 
 // bootstrap vue
-import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import BootstrapVue from 'bootstrap-vue';
 
