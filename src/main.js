@@ -32,10 +32,10 @@ Vue.use(Vue2Filters);
 Vue.use(Directives);
 Vue.use(BootstrapVue);
 Vue.use(VueGoogleMaps, {
-	load: {
-		key: process.env.MMGR_AWS_ACCESS_KEY || null,
-		libraries: 'places'
-	}
+  load: {
+    key: 'AIzaSyAIFsUS3JlFi4pbeACUGLL5C4grNUgm2G4',
+    libraries: 'places'
+  }
 })
 
 Vue.config.productionTip = false;
