@@ -1,3 +1,8 @@
 export default {
-  name: 'DoctorSummary'
+  name: 'DoctorSummary',
+  data () {
+    return {
+      isEditing: false
+    }
+  }
 }

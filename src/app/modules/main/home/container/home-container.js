@@ -16,7 +16,11 @@ export default {
         password: ''
       },
       show: true,
-      markers: [],
+      markers: [
+        {
+          position: { lat: 25.2048, lng: 55.2708 }
+        }
+      ],
       place: null
     }
   },

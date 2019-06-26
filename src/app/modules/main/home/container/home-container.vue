@@ -1,8 +1,8 @@
 <template>
 	<div>
 		<GmapMap
-			:center="{lat:10, lng:10}"
-			:zoom="7"
+			:center="{lat:25.2048, lng:55.2708}"
+			:zoom="10"
 			:options="{scrollwheel: false, mapTypeControl: false, fullscreenControl: false, zoomControl: false}"
 			map-type-id="terrain"
 			style="width: 100%; height: 100vh"
@@ -14,6 +14,7 @@
 				:position="m.position"
 				:clickable="true"
 				:draggable="true"
+        type="establishment"
 				@click="center=m.position"
 			/>
 		</GmapMap>

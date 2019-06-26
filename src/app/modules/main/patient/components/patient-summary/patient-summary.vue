@@ -11,35 +11,41 @@
       <div class="details-container">
         <!-- Name -->
         <div class="name">
-          <h2><a href="">John Smith</a></h2>
+          <h2 v-if="!isEditing"><a href="">John Smith</a></h2>
+          <b-form-input v-else id="input-1" type="text" placeholder="Enter email" value="John Smith" class="mr-3"></b-form-input>
           <div class="edit-button">
-            <button type="button" class="btn btn-sm btn-primary">Edit</button>
+            <button type="button" class="btn btn-sm" :class="{'btn-primary': !isEditing, 'btn-success': isEditing}" @click="isEditing = !isEditing"> {{ isEditing ? 'Save' : 'Edit' }}</button>
           </div>
         </div>
         <!-- Informations -->
         <div class="info">
           <ul class="list-group list-group-flush list my--3">
             <li class="list-group-item px-0">
-              <p class="mb-0">#750 St. Cool, Clinic B-Braun Paris, France</p>
+              <p v-if="!isEditing" class="mb-0">#750 St. Cool, Clinic B-Braun Paris, France</p>
+              <b-form-input v-else id="input-1" type="text" placeholder="Enter email" value="#750 St. Cool, Clinic B-Braun Paris, France"></b-form-input>
               <small>Address</small>
             </li>
             <li class="list-group-item px-0 d-flex">
               <div class="col pl-0">
-                <p class="mb-0">Cool linfo</p>
-                <small>Info</small>
+                <p v-if="!isEditing" class="mb-0">**** **** **** **** 221</p>
+                <b-form-input v-else id="input-1" type="text" placeholder="Enter email" value="**** **** **** **** 221"></b-form-input>
+                <small>Payment Information</small>
               </div>
               <div class="col">
-                <p class="mb-0">Cool linfo</p>
-                <small>Info</small>
+                <p v-if="!isEditing" class="mb-0">European health insurance card</p>
+                <b-form-input v-else id="input-1" type="text" placeholder="Enter email" value="European health insurance card"></b-form-input>
+                <small>Health Insurance Information</small>
               </div>
             </li>
             <li class="list-group-item px-0 d-flex">
               <div class="col pl-0">
-                <p class="mb-0">+36823829361239</p>
+                <p v-if="!isEditing" class="mb-0">+36823829361239</p>
+                <b-form-input v-else id="input-1" type="text" placeholder="Enter email" value="+36823829361239"></b-form-input>
                 <small>Contact</small>
               </div>
               <div class="col">
-                <p class="mb-0">verycoolemail@gmail.com</p>
+                <p v-if="!isEditing" class="mb-0">verycoolemail@gmail.com</p>
+                <b-form-input v-else id="input-1" type="text" placeholder="Enter email" value="verycoolemail@gmail.com"></b-form-input>
                 <small>Email</small>
               </div>
             </li>

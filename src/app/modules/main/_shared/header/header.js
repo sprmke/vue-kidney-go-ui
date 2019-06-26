@@ -8,6 +8,12 @@ export default {
   methods: {
     onShowProfile() {
       this.showProfile = !this.showProfile;
+    },
+    onLogout() {
+      this.$router.push({ path: '/home' })
+    },
+    navigateTo(path) {
+      this.$router.push({ path: '/' + path + '/1' })
     }
   }
 }

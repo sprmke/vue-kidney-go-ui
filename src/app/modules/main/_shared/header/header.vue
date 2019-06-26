@@ -23,13 +23,13 @@
         </div>
         <!-- Links -->
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Appointments <span class="sr-only">(current)</span></a>
+          <li class="nav-item" @click="navigateTo('doctor')">
+            <a class="nav-link">Doctor <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Locate <span class="sr-only">(current)</span></a>
+          <li class="nav-item" @click="navigateTo('patient')">
+            <a class="nav-link">Patients <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item dropdown">
+          <!-- <li class="nav-item dropdown">
             <a class="nav-link" href="#" id="navbar-primary_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Request</a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-primary_dropdown_1">
               <a class="dropdown-item" href="#">Action</a>
@@ -37,7 +37,7 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
-          </li>
+          </li> -->
         </ul>
         <!-- Search -->
         <!-- <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
@@ -67,24 +67,16 @@
               </div>
             </a>
             <div class="dropdown-menu dropdown-menu-right" :class="{'show': showProfile }">
-              <a href="/profile" class="dropdown-item">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <span>My profile</span>
-              </a>
-              <a href="#!" class="dropdown-item">
-                <i class="fa fa-cog" aria-hidden="true"></i>
-                <span>Settings</span>
-              </a>
-              <a href="#!" class="dropdown-item">
+              <!-- <a href="#!" class="dropdown-item">
                 <i class="fa fa-calendar" aria-hidden="true"></i>
                 <span>Activity</span>
               </a>
               <a href="#!" class="dropdown-item">
                 <i class="fa fa-life-ring" aria-hidden="true"></i>
                 <span>Support</span>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a href="#!" class="dropdown-item logout">
+              </a> -->
+              <!-- <div class="dropdown-divider"></div> -->
+              <a class="dropdown-item logout" @click="onLogout">
                 <i class="fa fa-sign-out" aria-hidden="true"></i>
                 <span class="logout">Logout</span>
               </a>

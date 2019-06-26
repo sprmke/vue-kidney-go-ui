@@ -8,8 +8,13 @@
 
 .nav-item {
   margin-right: 1rem;
+
+  button {
+    height: 43px;
+  }
 }
 
 .gmap-search {
   width: 300px !important;
+  height: 43px;
 }
