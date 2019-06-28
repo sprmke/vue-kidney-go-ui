@@ -1,0 +1,22 @@
+.autocomplete-results {
+  position: absolute;
+  left: 0;
+  right: 55px;
+  top: 44px;
+}
+
+.autocomplete-result {
+  list-style: none;
+  text-align: left;
+  padding: 4px 2px;
+  cursor: pointer;
+}
+
+.autocomplete-result:hover, .autocomplete-result.is-active {
+  background-color: #4AAE9B;
+  color: white;
+}
+
+.form-control {
+  height: 43px;
+}

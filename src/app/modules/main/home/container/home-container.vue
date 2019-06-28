@@ -14,8 +14,7 @@
 				:position="m.position"
 				:clickable="true"
 				:draggable="true"
-        type="establishment"
-				@click="center=m.position"
+				@click="onMarkerClick"
 			/>
 		</GmapMap>
 
@@ -36,14 +35,10 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
-						<div class="input-group">
-							<GmapAutocomplete @place_changed="setPlace" class="form-control gmap-search"></GmapAutocomplete>
-							<div class="input-group-append">
-								<button class="btn btn-primary" @click="usePlace">
-									<i class="fa fa-search"></i>
-								</button>
-							</div>
-						</div>
+						<Autocomplete
+							class="gmap-search"
+							@search-result="navigateToClinic"
+							:items="[ 'Dialysis Clinic Slovenia', 'Dialysis Clinic Croatia']" />
 					</li>
 					<li class="nav-item">
 						<b-button variant="primary" v-b-modal.login-modal>LOG IN</b-button>
@@ -57,10 +52,25 @@
 				</ul>
 			</div>
 		</nav>
+		
+		<transition name="slide-fade">
+			<div v-if="showClinicInfo" class="card clinic-info">
+				<!-- Card image -->
+				<img class="card-img-top" :src="clinicSelected[0].image" alt="Image placeholder">
+				<!-- Card body -->
+				<div class="card-body">
+					<h5 class="h2 card-title mb-0">{{ clinicSelected[0].name }}</h5>
+					<small class="text-muted">Medical clinic</small>
+					<p class="card-text mt-4 mb-0"><i class="fa fa-map-marker" aria-hidden="true"></i> {{ clinicSelected[0].address }}</p>
+					<p v-if="clinicSelected[0].phone" class="card-text mt-2 mb-0"><i class="fa fa-phone" aria-hidden="true"></i> {{ clinicSelected[0].phone }}</p>
+					<a :href="clinicSelected[0].website" target="_blank" class="btn btn-link px-0"><i class="fa fa-globe" aria-hidden="true"></i> {{ clinicSelected[0].website }}</a>
+				</div>
+			</div>
+		</transition>
 
 		<login-modal></login-modal>
 		<signup-modal></signup-modal>
-		<clinic-modal></clinic-modal>
+		<clinic-modal :title="clinicSelected[0].name"></clinic-modal>
 	</div>
 </template>
 

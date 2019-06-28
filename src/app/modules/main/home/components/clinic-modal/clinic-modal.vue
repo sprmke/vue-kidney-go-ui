@@ -1,7 +1,7 @@
 <template>
-	<b-modal id="clinic-modal" title="CLINIC NAME" centered hide-footer>
-		<app-datepicker :inline="true" :bootstrap-styling="true" class="adjust-width"></app-datepicker>
-		<b-button type="submit" variant="primary" class="mt-2" block>SEND REQUEST</b-button>
+	<b-modal id="clinic-modal" :title="title" centered hide-footer>
+		<app-datepicker :highlighted="highlighted" :inline="true" :bootstrap-styling="true" @selected="setDialysis" class="adjust-width"></app-datepicker>
+		<b-button type="submit" variant="primary" class="mt-2" block @click="onSendRequest">SEND REQUEST</b-button>
 	</b-modal>
 </template>
 
