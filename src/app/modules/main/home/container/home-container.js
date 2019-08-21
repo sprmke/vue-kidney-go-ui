@@ -17,6 +17,7 @@ export default {
         email: '',
         password: ''
       },
+      isShownMobileNav: false,
       show: true,
       showClinicInfo: false,
       markers: [
@@ -91,6 +92,10 @@ export default {
     onMarkerClick() {
       this.$bvModal.show('clinic-modal');
       this.showClinicInfo = false;
+    },
+
+    showMobileNav() {
+      this.isShownMobileNav = !this.isShownMobileNav;
     }
   }
 }
